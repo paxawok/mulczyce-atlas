@@ -41,7 +41,7 @@
     ]
   },
   "properties":{
-    "datetime":"2026-11-22T20:29:12Z",
+    "datetime":"2026-11-22T21:28:06Z",
     "start_datetime":"0001-01-01T00:00:00.000Z",
     "end_datetime":"9999-12-31T23:59:59.999Z",
     "tiles:tile_matrix_sets":{
@@ -188,8 +188,8 @@
   },
   "asset_templates":{
     "bands":{
-      "href":"./{TileMatrix}/{TileCol}/{TileRow}.png",
-      "type":"image/png",
+      "href":"./{TileMatrix}/{TileCol}/{TileRow}.webp",
+      "type":"image/webp",
       "bands":[
         {
           "name":"Band1",

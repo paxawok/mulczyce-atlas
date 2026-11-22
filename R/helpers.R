@@ -13,7 +13,7 @@ suppressPackageStartupMessages({
 # лежать на окремому хостингу, наприклад:
 #   TILES_URL="https://example.com/tiles/wig1931/{z}/{x}/{y}.png"
 CFG <- list(
-  tiles_url  = Sys.getenv("TILES_URL", "tiles/wig1931/{z}/{x}/{y}.png"),
+  tiles_url  = Sys.getenv("TILES_URL", "tiles/wig1931/{z}/{x}/{y}.webp"),
   # Початковий вигляд. Замініть на координати Мульчиць або центр з build_tiles.sh.
   center     = c(lng = 25.80, lat = 51.4678),
   zoom       = 12,
