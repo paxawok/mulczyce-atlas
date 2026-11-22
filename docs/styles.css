@@ -1,0 +1,10 @@
+.opacity-ctl {
+  background: #fff;
+  padding: 6px 10px;
+  font: 12px Arial, sans-serif;
+  line-height: 1.4;
+}
+.opacity-ctl input[type="range"] {
+  display: block;
+  width: 150px;
+}

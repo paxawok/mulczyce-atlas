@@ -1,0 +1,53 @@
+---
+title: "Реєстр написів і населених пунктів"
+---
+
+```{r}
+#| include: false
+source("R/helpers.R")
+library(DT)
+ins <- read_inscriptions()
+sett <- read_settlements()
+
+dt_opts <- list(
+  pageLength = 25,
+  language = list(url = "https://cdn.datatables.net/plug-ins/1.13.6/i18n/uk.json")
+)
+```
+
+## Підсумок за статусами
+
+```{r}
+#| echo: false
+ins |>
+  count(status, .drop = FALSE) |>
+  transmute(`Код` = status, `Значення` = status_label(status), `Записів` = n) |>
+  knitr::kable()
+```
+
+## Написи на карті
+
+```{r}
+#| echo: false
+ins |>
+  transmute(
+    ID = id, `Напис` = name_hist, `Тип` = type, `Дворів` = houses,
+    `Відповідник` = name_modern, `Статус` = status_label(status),
+    `Впевн.` = confidence, `Примітки` = note
+  ) |>
+  datatable(filter = "top", rownames = FALSE, options = dt_opts)
+```
+
+## Населені пункти
+
+```{r}
+#| echo: false
+sett |>
+  transmute(
+    ID = id, `Історична назва` = name_hist, `Сучасна назва` = name_modern,
+    `Варіанти` = variants, `Тип` = type, `Дворів` = houses,
+    `Перша згадка` = first_mention, `Статус` = status_label(status),
+    `Впевн.` = confidence, `Примітки` = note
+  ) |>
+  datatable(filter = "top", rownames = FALSE, options = dt_opts)
+```

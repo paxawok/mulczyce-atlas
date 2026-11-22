@@ -1,0 +1,11 @@
+.quarto/
+.Rproj.user/
+.Rhistory
+.RData
+*.tif
+*.tiff
+data/raw/
+.DS_Store
+
+/.quarto/
+**/*.quarto_ipynb

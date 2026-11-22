@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - "tiles/**"
+
+lang: uk
+
+website:
+  title: "Мульчиці і друзья: атлас"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Головна
+      - href: karta.qmd
+        text: Карта
+      - href: toponimy.qmd
+        text: Реєстр
+      - href: metodyka.qmd
+        text: Методика
+    right:
+      - icon: telegram
+        href: https://t.me/mulczyce_oo
+        aria-label: Telegram-канал
+  page-footer:
+    center: "Канал: [t.me/mulczyce_oo](https://t.me/mulczyce_oo)"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+execute:
+  warning: false
+  message: false
