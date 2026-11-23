@@ -1,0 +1,18 @@
+---
+title: "Шторка: порівняння"
+toc: false
+page-layout: full
+---
+
+```{r}
+#| include: false
+source("R/helpers.R")
+source("R/map_extras.R")
+```
+
+Ліворуч сучасний знімок, праворуч карта 1930-х. Тягніть роздільник.
+
+```{r}
+#| echo: false
+swipe_map() |> add_swipe()
+```

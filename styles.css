@@ -8,3 +8,67 @@
   display: block;
   width: 150px;
 }
+
+/* Підписи назв на карті */
+.mulczyce-label {
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font: 12px Arial, sans-serif;
+  padding: 1px 5px;
+}
+.mulczyce-label::before { display: none; }
+
+/* Шторка */
+.swipe-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  margin-left: -22px;
+  z-index: 1000;
+  cursor: ew-resize;
+  touch-action: none;
+}
+.swipe-divider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  margin-left: -1.5px;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+.swipe-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 20px Arial, sans-serif;
+  color: #333;
+}
+.swipe-handle::after { content: "\2194"; }
+.swipe-cap {
+  position: absolute;
+  top: 10px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font: 12px Arial, sans-serif;
+  padding: 3px 8px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.swipe-cap-left { left: 10px; }
+.swipe-cap-right { right: 10px; }

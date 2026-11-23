@@ -7,52 +7,21 @@ page-layout: full
 ```{r}
 #| include: false
 source("R/helpers.R")
+source("R/map_extras.R")
 ins <- read_inscriptions()
 ```
-
-::: {.panel-tabset}
-
-## Прозорість
 
 ```{r}
 #| echo: false
 base_map() |>
   add_old_map() |>
-  add_inscriptions(ins) |>
+  add_markers(ins) |>
   addLayersControl(
     baseGroups    = c("Сучасний знімок", "OpenStreetMap"),
-    overlayGroups = c("Карта 1930-х", "Написи"),
+    overlayGroups = c("Карта 1930-х", marker_groups(ins)),
     options       = layersControlOptions(collapsed = FALSE)
   ) |>
   add_opacity_slider()
 ```
 
-## Шторка
-
-Ліворуч сучасний знімок, праворуч карта 1930-х. Тягніть роздільник.
-
-```{r}
-#| echo: false
-#| eval: !expr requireNamespace("leaflet.extras2", quietly = TRUE)
-old_opts <- modifyList(
-  tileOptions(
-    opacity = 1, minZoom = CFG$min_zoom, maxZoom = CFG$max_zoom,
-    maxNativeZoom = CFG$max_native, noWrap = TRUE
-  ),
-  list(pane = "right")
-)
-
-leaflet(height = CFG$height, width = "100%",
-        options = leafletOptions(minZoom = 8, maxZoom = CFG$max_zoom)) |>
-  setView(CFG$center[["lng"]], CFG$center[["lat"]], CFG$zoom) |>
-  addMapPane("left", zIndex = 0) |>
-  addMapPane("right", zIndex = 0) |>
-  addProviderTiles(providers$Esri.WorldImagery, layerId = "modern",
-                   options = pathOptions(pane = "left")) |>
-  addTiles(CFG$tiles_url, layerId = "old", options = old_opts) |>
-  leaflet.extras2::addSidebyside(layerId = "sbs", leftId = "modern", rightId = "old")
-```
-
-:::
-
-Мітки на першій вкладці з'являються після того, як у колонках «Широта» і «Довгота» таблиці заповнено координати та виконано `scripts/sync_sheet.R`.
+Кружечок: колір означає статус, розмір залежить від кількості дворів на карті. Клік відкриває картку, назви з'являються при наближенні. Для прямого порівняння є сторінка [Шторка](shtorka.qmd).

@@ -18,6 +18,8 @@ website:
         text: Реєстр
       - href: metodyka.qmd
         text: Методика
+      - href: shtorka.qmd
+        text: Шторка
     right:
       - icon: telegram
         href: https://t.me/mulczyce_oo
