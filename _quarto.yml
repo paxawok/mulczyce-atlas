@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+  pre-render: quarto run scripts/make_pages.R
   resources:
     - "tiles/**"
 
@@ -14,6 +15,8 @@ website:
         text: Головна
       - href: karta.qmd
         text: Карта
+      - href: objects/index.qmd
+        text: Об'єкти
       - href: toponimy.qmd
         text: Реєстр
       - href: metodyka.qmd

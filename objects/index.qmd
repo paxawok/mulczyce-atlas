@@ -1,0 +1,18 @@
+---
+title: "Об'єкти"
+page-layout: full
+listing:
+  contents: "*.qmd"
+  type: table
+  fields: [title, subtitle, description, categories]
+  field-display-names:
+    title: "Напис"
+    subtitle: "Відповідник"
+    description: "Опис"
+    categories: "Статус"
+  sort: "title"
+  filter-ui: true
+  categories: true
+---
+
+Сторінки створюються автоматично з реєстру. Кожна має факти, примітки та джерела і посилання на мітку на карті.

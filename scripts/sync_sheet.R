@@ -30,10 +30,12 @@ if (nzchar(Sys.getenv("GS4_AUTH"))) gs4_auth() else gs4_deauth()
 # змінювати, але порядок колонок має лишатися.
 INS_COLS <- c("id", "name_hist", "type", "sheet", "houses", "name_modern",
               "status", "confidence", "lat", "lon", "obsidian_note",
-              "source_id", "note")
+              "source_id", "note", "post_url")
 SET_COLS <- c("id", "inscription_id", "name_hist", "name_modern", "variants",
               "type", "houses", "first_mention", "status", "confidence",
               "lat", "lon", "obsidian_note", "source_ids", "note")
+SRC_COLS <- c("id", "title", "period", "type", "url", "archive_ref", "notes",
+              "obsidian_note")
 
 read_tab <- function(sheet, cols) {
   x <- tryCatch(
@@ -74,6 +76,7 @@ check_status <- function(x, label) {
 
 ins <- read_tab("Написи на карті", INS_COLS)
 sett <- read_tab("Населені пункти", SET_COLS)
+srcs <- read_tab("Джерела", SRC_COLS)
 
 check_coords(ins, "Напис"); check_status(ins, "Напис")
 check_coords(sett, "Пункт"); check_status(sett, "Пункт")
@@ -81,6 +84,7 @@ check_coords(sett, "Пункт"); check_status(sett, "Пункт")
 dir.create("data", showWarnings = FALSE)
 write_csv(ins, "data/inscriptions.csv", na = "")
 write_csv(sett, "data/settlements.csv", na = "")
+write_csv(srcs, "data/sources.csv", na = "")
 
 message("Збережено: data/inscriptions.csv (", nrow(ins), " рядків), ",
         "data/settlements.csv (", nrow(sett), " рядків).")

@@ -4,14 +4,14 @@
     "href": "toponimy.html",
     "title": "Реєстр написів і населених пунктів",
     "section": "",
-    "text": "Код\nЗначення\nЗаписів\n\n\n\n\nS\nЗбереглося\n16\n\n\nM\nЗмінилося\n3\n\n\nA\nЗникло\n1\n\n\nN\nЗ’явилося пізніше\n0\n\n\nU\nНе встановлено\n10"
+    "text": "Код\nЗначення\nЗаписів\n\n\n\n\nS\nЗбереглося\n14\n\n\nM\nЗмінилося\n3\n\n\nA\nЗникло\n1\n\n\nN\nЗ’явилося пізніше\n0\n\n\nU\nНе встановлено\n6"
   },
   {
     "objectID": "toponimy.html#підсумок-за-статусами",
     "href": "toponimy.html#підсумок-за-статусами",
     "title": "Реєстр написів і населених пунктів",
     "section": "",
-    "text": "Код\nЗначення\nЗаписів\n\n\n\n\nS\nЗбереглося\n16\n\n\nM\nЗмінилося\n3\n\n\nA\nЗникло\n1\n\n\nN\nЗ’явилося пізніше\n0\n\n\nU\nНе встановлено\n10"
+    "text": "Код\nЗначення\nЗаписів\n\n\n\n\nS\nЗбереглося\n14\n\n\nM\nЗмінилося\n3\n\n\nA\nЗникло\n1\n\n\nN\nЗ’явилося пізніше\n0\n\n\nU\nНе встановлено\n6"
   },
   {
     "objectID": "toponimy.html#написи-на-карті",
@@ -26,6 +26,237 @@
     "title": "Реєстр написів і населених пунктів",
     "section": "Населені пункти",
     "text": "Населені пункти"
+  },
+  {
+    "objectID": "objects/N-024.html",
+    "href": "objects/N-024.html",
+    "title": "B.w. (кілька позначок)",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-024.html#примітки",
+    "href": "objects/N-024.html#примітки",
+    "title": "B.w. (кілька позначок)",
+    "section": "Примітки",
+    "text": "Примітки\nРозшифровку звірити з легендою WIG."
+  },
+  {
+    "objectID": "objects/N-024.html#джерела",
+    "href": "objects/N-024.html#джерела",
+    "title": "B.w. (кілька позначок)",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-022.html",
+    "href": "objects/N-022.html",
+    "title": "Kap. Mezyhory",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-022.html#примітки",
+    "href": "objects/N-022.html#примітки",
+    "title": "Kap. Mezyhory",
+    "section": "Примітки",
+    "text": "Примітки\nСкорочення Kap. звірити з легендою WIG."
+  },
+  {
+    "objectID": "objects/N-022.html#джерела",
+    "href": "objects/N-022.html#джерела",
+    "title": "Kap. Mezyhory",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-020.html",
+    "href": "objects/N-020.html",
+    "title": "Nadleś",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-020.html#джерела",
+    "href": "objects/N-020.html#джерела",
+    "title": "Nadleś",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-018.html",
+    "href": "objects/N-018.html",
+    "title": "Ur. Moszczanica",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-018.html#джерела",
+    "href": "objects/N-018.html#джерела",
+    "title": "Ur. Moszczanica",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-016.html",
+    "href": "objects/N-016.html",
+    "title": "Ur. Pleso",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-016.html#джерела",
+    "href": "objects/N-016.html#джерела",
+    "title": "Ur. Pleso",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-014.html",
+    "href": "objects/N-014.html",
+    "title": "Zachoromcze",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-014.html#джерела",
+    "href": "objects/N-014.html#джерела",
+    "title": "Zachoromcze",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-012.html",
+    "href": "objects/N-012.html",
+    "title": "Ukowa",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-012.html#джерела",
+    "href": "objects/N-012.html#джерела",
+    "title": "Ukowa",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-010.html",
+    "href": "objects/N-010.html",
+    "title": "Podżabie",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-010.html#джерела",
+    "href": "objects/N-010.html#джерела",
+    "title": "Podżabie",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-008.html",
+    "href": "objects/N-008.html",
+    "title": "Pojedynce",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-008.html#джерела",
+    "href": "objects/N-008.html#джерела",
+    "title": "Pojedynce",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-006.html",
+    "href": "objects/N-006.html",
+    "title": "Zawyce",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-006.html#примітки",
+    "href": "objects/N-006.html#примітки",
+    "title": "Zawyce",
+    "section": "Примітки",
+    "text": "Примітки\nМожливий зв’язок із вулицею Завирська."
+  },
+  {
+    "objectID": "objects/N-006.html#джерела",
+    "href": "objects/N-006.html#джерела",
+    "title": "Zawyce",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-004.html",
+    "href": "objects/N-004.html",
+    "title": "Trauguttówka",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-004.html#джерела",
+    "href": "objects/N-004.html#джерела",
+    "title": "Trauguttówka",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-002.html",
+    "href": "objects/N-002.html",
+    "title": "Zwerynec",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-002.html#примітки",
+    "href": "objects/N-002.html#примітки",
+    "title": "Zwerynec",
+    "section": "Примітки",
+    "text": "Примітки\nГіпотеза: Звіринець. Не перевірено."
+  },
+  {
+    "objectID": "objects/N-002.html#джерела",
+    "href": "objects/N-002.html#джерела",
+    "title": "Zwerynec",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/index.html",
+    "href": "objects/index.html",
+    "title": "Об’єкти",
+    "section": "",
+    "text": "Сторінки створюються автоматично з реєстру. Кожна має факти, примітки та джерела і посилання на мітку на карті.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Напис\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nНапис\n\n\n\nВідповідник\n\n\n\nОпис\n\n\n\nСтатус\n\n\n\n\n\n\n\n\nB.w. (кілька позначок)\n\n\n \n\n\nумовний знак\n\n\nЗмінилося\n\n\n\n\n\n\nByszlak\n\n\nБишляк\n\n\nнаселений пункт, 82 дворів на карті\n\n\nЗбереглося\n\n\n\n\n\n\nJ. Dworskie\n\n\n \n\n\nводойма\n\n\nЗбереглося\n\n\n\n\n\n\nJamne\n\n\nЯмне\n\n\nнаселений пункт, 3 дворів на карті\n\n\nЗбереглося\n\n\n\n\n\n\nKap. Mezyhory\n\n\n \n\n\nокремий об’єкт\n\n\nНе встановлено\n\n\n\n\n\n\nKonik\n\n\nКоник\n\n\nнаселений пункт\n\n\nЗбереглося\n\n\n\n\n\n\nLas maj. Bielska Wola\n\n\n \n\n\nліс або угіддя\n\n\nНе встановлено\n\n\n\n\n\n\nMulczyce\n\n\nМульчиці\n\n\nнаселений пункт, 337 дворів на карті\n\n\nЗбереглося\n\n\n\n\n\n\nNadleś\n\n\n \n\n\nліс або угіддя\n\n\nЗбереглося\n\n\n\n\n\n\nPodlubycze\n\n\nЛюбичі\n\n\nнаселений пункт\n\n\nЗбереглося\n\n\n\n\n\n\nPodżabie\n\n\nЖуравлине\n\n\nнаселений пункт, 4 дворів на карті\n\n\nЗмінилося\n\n\n\n\n\n\nPojedynce\n\n\n \n\n\nнаселений пункт\n\n\nНе встановлено\n\n\n\n\n\n\nSelce\n\n\nСельце\n\n\nнаселений пункт\n\n\nЗбереглося\n\n\n\n\n\n\nStd. (кілька позначок)\n\n\n \n\n\nумовний знак\n\n\nЗбереглося\n\n\n\n\n\n\nTrauguttówka\n\n\nТраугутівка\n\n\nнаселений пункт, 26 дворів на карті\n\n\nЗникло\n\n\n\n\n\n\nUkowa\n\n\nГукова\n\n\nнаселений пункт\n\n\nЗбереглося\n\n\n\n\n\n\nUr. Moszczanica\n\n\n \n\n\nурочище\n\n\nНе встановлено\n\n\n\n\n\n\nUr. Perechod\n\n\n \n\n\nурочище\n\n\nНе встановлено\n\n\n\n\n\n\nUr. Pleso\n\n\n \n\n\nурочище\n\n\nНе встановлено\n\n\n\n\n\n\nWiszała\n\n\nВішала\n\n\nнаселений пункт, 6 дворів на карті\n\n\nЗбереглося\n\n\n\n\n\n\nZachoromcze\n\n\nЗахоромці\n\n\nнаселений пункт, 3 дворів на карті\n\n\nЗбереглося\n\n\n\n\n\n\nZahora\n\n\nЗагора\n\n\nнаселений пункт, 5 дворів на карті\n\n\nЗбереглося\n\n\n\n\n\n\nZawyce\n\n\nЗавир\n\n\nнаселений пункт, 3 дворів на карті\n\n\nЗбереглося\n\n\n\n\n\n\nZwerynec\n\n\nЗвіринець\n\n\nнаселений пункт, 28 дворів на карті\n\n\nЗмінилося\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "karta.html",
+    "href": "karta.html",
+    "title": "Карта: 1930-ті та сучасність",
+    "section": "",
+    "text": "Кружечок: колір означає статус, розмір залежить від кількості дворів на карті. Клік відкриває картку об’єкта, кнопка «Детальніше» веде на його окрему сторінку. Назви з’являються при наближенні. Усі об’єкти списком: Об’єкти. Для прямого порівняння є сторінка Шторка."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Мульчиці і друзья: атлас",
+    "section": "",
+    "text": "Сховище краєзнавчих даних про Мульчиці та навколишні території Вараської громади (Рівненщина, історична Волинь і Полісся). Основа проєкту: порівняння аркушів міжвоєнної польської карти WIG (1:100 000, 1930-ті) із сучасними знімками.\nКанал у Telegram: t.me/mulczyce_oo."
+  },
+  {
+    "objectID": "index.html#розділи",
+    "href": "index.html#розділи",
+    "title": "Мульчиці і друзья: атлас",
+    "section": "Розділи",
+    "text": "Розділи\n\nКарта: стара карта поверх сучасного знімка з повзунком прозорості, режимом «шторка» та мітками написів.\nРеєстр: усі написи з карти й населені пункти, з пошуком і фільтрами.\nМетодика: джерела, геоприв’язка, коди статусів, обмеження."
+  },
+  {
+    "objectID": "index.html#стан-даних",
+    "href": "index.html#стан-даних",
+    "title": "Мульчиці і друзья: атлас",
+    "section": "Стан даних",
+    "text": "Стан даних\nУ реєстрі 24 написів. Для 18 з них уже встановлено статус щодо сучасності, координати є в 13."
   },
   {
     "objectID": "metodyka.html",
@@ -77,32 +308,186 @@
     "text": "Права\nСтара карта подається власними тайлами. Сучасний знімок (Esri World Imagery) і OpenStreetMap підключаються як зовнішні шари з атрибуцією постачальників і в тайли не вбудовуються."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Мульчиці і друзья: атлас",
+    "objectID": "objects/N-001.html",
+    "href": "objects/N-001.html",
+    "title": "Mulczyce",
     "section": "",
-    "text": "Сховище краєзнавчих даних про Мульчиці та навколишні території Вараської громади (Рівненщина, історична Волинь і Полісся). Основа проєкту: порівняння аркушів міжвоєнної польської карти WIG (1:100 000, 1930-ті) із сучасними знімками.\nКанал у Telegram: t.me/mulczyce_oo."
+    "text": "← Усі об’єкти · Показати на карті"
   },
   {
-    "objectID": "index.html#розділи",
-    "href": "index.html#розділи",
-    "title": "Мульчиці і друзья: атлас",
-    "section": "Розділи",
-    "text": "Розділи\n\nКарта: стара карта поверх сучасного знімка з повзунком прозорості, режимом «шторка» та мітками написів.\nРеєстр: усі написи з карти й населені пункти, з пошуком і фільтрами.\nМетодика: джерела, геоприв’язка, коди статусів, обмеження."
+    "objectID": "objects/N-001.html#джерела",
+    "href": "objects/N-001.html#джерела",
+    "title": "Mulczyce",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
   },
   {
-    "objectID": "index.html#стан-даних",
-    "href": "index.html#стан-даних",
-    "title": "Мульчиці і друзья: атлас",
-    "section": "Стан даних",
-    "text": "Стан даних\nУ реєстрі 30 написів. Для 20 з них уже встановлено статус щодо сучасності, координати є в 13."
-  },
-  {
-    "objectID": "karta.html",
-    "href": "karta.html",
-    "title": "Карта: 1930-ті та сучасність",
+    "objectID": "objects/N-003.html",
+    "href": "objects/N-003.html",
+    "title": "Byszlak",
     "section": "",
-    "text": "Кружечок: колір означає статус, розмір залежить від кількості дворів на карті. Клік відкриває картку, назви з’являються при наближенні. Для прямого порівняння є сторінка Шторка."
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-003.html#джерела",
+    "href": "objects/N-003.html#джерела",
+    "title": "Byszlak",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-005.html",
+    "href": "objects/N-005.html",
+    "title": "Podlubycze",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-005.html#джерела",
+    "href": "objects/N-005.html#джерела",
+    "title": "Podlubycze",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-007.html",
+    "href": "objects/N-007.html",
+    "title": "Wiszała",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-007.html#примітки",
+    "href": "objects/N-007.html#примітки",
+    "title": "Wiszała",
+    "section": "Примітки",
+    "text": "Примітки\nГіпотеза: Вішала"
+  },
+  {
+    "objectID": "objects/N-007.html#джерела",
+    "href": "objects/N-007.html#джерела",
+    "title": "Wiszała",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-009.html",
+    "href": "objects/N-009.html",
+    "title": "Konik",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-009.html#джерела",
+    "href": "objects/N-009.html#джерела",
+    "title": "Konik",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-011.html",
+    "href": "objects/N-011.html",
+    "title": "Zahora",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-011.html#джерела",
+    "href": "objects/N-011.html#джерела",
+    "title": "Zahora",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-013.html",
+    "href": "objects/N-013.html",
+    "title": "Selce",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-013.html#джерела",
+    "href": "objects/N-013.html#джерела",
+    "title": "Selce",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-015.html",
+    "href": "objects/N-015.html",
+    "title": "Jamne",
+    "section": "",
+    "text": "← Усі об’єкти · Показати на карті"
+  },
+  {
+    "objectID": "objects/N-015.html#джерела",
+    "href": "objects/N-015.html#джерела",
+    "title": "Jamne",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-017.html",
+    "href": "objects/N-017.html",
+    "title": "Ur. Perechod",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-017.html#джерела",
+    "href": "objects/N-017.html#джерела",
+    "title": "Ur. Perechod",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-019.html",
+    "href": "objects/N-019.html",
+    "title": "Las maj. Bielska Wola",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-019.html#джерела",
+    "href": "objects/N-019.html#джерела",
+    "title": "Las maj. Bielska Wola",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-021.html",
+    "href": "objects/N-021.html",
+    "title": "J. Dworskie",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-021.html#джерела",
+    "href": "objects/N-021.html#джерела",
+    "title": "J. Dworskie",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
+  },
+  {
+    "objectID": "objects/N-023.html",
+    "href": "objects/N-023.html",
+    "title": "Std. (кілька позначок)",
+    "section": "",
+    "text": "← Усі об’єкти"
+  },
+  {
+    "objectID": "objects/N-023.html#примітки",
+    "href": "objects/N-023.html#примітки",
+    "title": "Std. (кілька позначок)",
+    "section": "Примітки",
+    "text": "Примітки\nРозшифровку звірити з легендою WIG."
+  },
+  {
+    "objectID": "objects/N-023.html#джерела",
+    "href": "objects/N-023.html#джерела",
+    "title": "Std. (кілька позначок)",
+    "section": "Джерела",
+    "text": "Джерела\n\nZ-001: Аркуші WIG 1:100 000, зокрема PAS 42 SŁUP 41 (4 суміжні аркуші) (1930-ті)"
   },
   {
     "objectID": "shtorka.html",

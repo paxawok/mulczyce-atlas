@@ -9,3 +9,7 @@ data/raw/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Сторінки об'єктів генеруються scripts/make_pages.R
+objects/*.qmd
+!objects/index.qmd

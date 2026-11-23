@@ -72,3 +72,16 @@
 }
 .swipe-cap-left { left: 10px; }
 .swipe-cap-right { right: 10px; }
+
+/* Картка об'єкта у спливному вікні */
+.obj-card { font: 13px/1.4 Arial, sans-serif; min-width: 220px; }
+.obj-card .obj-title { font-size: 16px; font-weight: bold; }
+.obj-card .obj-sub { color: #555; margin-bottom: 6px; }
+.obj-card table { width: 100%; border-collapse: collapse; margin: 4px 0; }
+.obj-card th { text-align: left; font-weight: normal; color: #666; padding: 2px 10px 2px 0; white-space: nowrap; vertical-align: top; }
+.obj-card td { padding: 2px 0; }
+.obj-card .obj-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; box-shadow: 0 0 0 1px #999; }
+.obj-card .obj-note { margin: 6px 0; font-style: italic; color: #444; }
+.obj-card .obj-links { margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
+.obj-card a.obj-btn { background: #1F3864; color: #fff !important; padding: 4px 10px; border-radius: 4px; text-decoration: none; }
+.obj-card a.obj-btn-alt { background: #2a7ab8; }

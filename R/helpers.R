@@ -15,8 +15,8 @@ suppressPackageStartupMessages({
 CFG <- list(
   tiles_url  = Sys.getenv("TILES_URL", "tiles/wig1931/{z}/{x}/{y}.webp"),
   # Початковий вигляд. Замініть на координати Мульчиць або центр з build_tiles.sh.
-  center     = c(lng = 25.80, lat = 51.4678),
-  zoom       = 12,
+  center     = c(lng = 25.855, lat = 51.538),
+  zoom       = 13,
   min_zoom   = 10,   # нижче цього рівня стара карта не показується
   max_native = 15,   # має збігатися з максимальним зумом у build_tiles.sh
   max_zoom   = 18,
@@ -48,6 +48,7 @@ to_num <- function(x) suppressWarnings(as.numeric(gsub(",", ".", x, fixed = TRUE
 
 read_inscriptions <- function(path = "data/inscriptions.csv") {
   read_text_csv(path) |>
+    filter(!is.na(id)) |>
     mutate(
       houses     = suppressWarnings(as.integer(houses)),
       confidence = suppressWarnings(as.integer(confidence)),
@@ -59,6 +60,7 @@ read_inscriptions <- function(path = "data/inscriptions.csv") {
 
 read_settlements <- function(path = "data/settlements.csv") {
   read_text_csv(path) |>
+    filter(!is.na(id)) |>
     mutate(
       houses     = suppressWarnings(as.integer(houses)),
       confidence = suppressWarnings(as.integer(confidence)),

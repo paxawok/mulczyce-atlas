@@ -29,13 +29,17 @@ ins |>
 
 ```{r}
 #| echo: false
+esc <- function(x) htmlEscape(ifelse(is.na(x), "", as.character(x)))
 ins |>
   transmute(
-    ID = id, `Напис` = name_hist, `Тип` = type, `Дворів` = houses,
-    `Відповідник` = name_modern, `Статус` = status_label(status),
-    `Впевн.` = confidence, `Примітки` = note
+    ID = esc(id),
+    `Напис` = paste0("<a href=\"objects/", htmlEscape(id, attribute = TRUE), ".html\">",
+                     esc(name_hist), "</a>"),
+    `Тип` = esc(type), `Дворів` = houses,
+    `Відповідник` = esc(name_modern), `Статус` = esc(status_label(status)),
+    `Впевн.` = confidence, `Примітки` = esc(note)
   ) |>
-  datatable(filter = "top", rownames = FALSE, options = dt_opts)
+  datatable(filter = "top", rownames = FALSE, escape = FALSE, options = dt_opts)
 ```
 
 ## Населені пункти

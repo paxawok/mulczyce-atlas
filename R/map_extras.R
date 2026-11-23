@@ -1,23 +1,45 @@
-# Додаткові функції карти: мітки за статусами, підписи на великих зумах, шторка.
+# Додаткові функції карти: картки об'єктів, мітки за статусами, підписи на
+# великих зумах, посилання на об'єкт, шторка.
 # Підключається після helpers.R:
 #   source("R/helpers.R"); source("R/map_extras.R")
-# Не потребує пакета leaflet.extras2.
 
-# Спливне вікно: поля з helpers.R::make_popup() + посилання на пост, якщо
-# в даних є колонка post_url і значення починається з https://
-popup_html <- function(d) {
-  link <- rep("", nrow(d))
+# Картка об'єкта (HTML для спливного вікна).
+# Кнопка "Детальніше" веде на objects/<id>.html (створює scripts/make_pages.R).
+# Кнопка "Пост у каналі" з'являється, якщо в даних є колонка post_url (https://).
+popup_html <- function(d, detail_dir = "objects") {
+  esc <- function(x) htmlEscape(ifelse(is.na(x), "", as.character(x)))
+  row <- function(label, val) {
+    val <- as.character(val)
+    ifelse(is.na(val) | val == "", "",
+           paste0("<tr><th>", label, "</th><td>", htmlEscape(val), "</td></tr>"))
+  }
+  modern <- esc(d$name_modern)
+  conf   <- ifelse(is.na(d$confidence), NA_character_, paste0(d$confidence, " з 3"))
+  col    <- status_color(d$status); col[is.na(col)] <- "#999999"
+  status_row <- paste0(
+    "<tr><th>Статус</th><td><span class=\"obj-dot\" style=\"background:", col,
+    "\"></span>", esc(status_label(d$status)), "</td></tr>"
+  )
+  detail <- paste0("<a class=\"obj-btn\" href=\"", detail_dir, "/",
+                   htmlEscape(d$id, attribute = TRUE), ".html\">Детальніше</a>")
+  post <- rep("", nrow(d))
   if ("post_url" %in% names(d)) {
     ok <- !is.na(d$post_url) & grepl("^https://", d$post_url)
-    link[ok] <- paste0(
-      "<br><a href=\"", htmlEscape(d$post_url[ok], attribute = TRUE),
-      "\" target=\"_blank\" rel=\"noopener\">Читати в каналі</a>"
-    )
+    post[ok] <- paste0("<a class=\"obj-btn obj-btn-alt\" href=\"",
+      htmlEscape(d$post_url[ok], attribute = TRUE),
+      "\" target=\"_blank\" rel=\"noopener\">Пост у каналі</a>")
   }
-  paste0(make_popup(d), link)
+  paste0(
+    "<div class=\"obj-card\">",
+    "<div class=\"obj-title\">", esc(d$name_hist), "</div>",
+    ifelse(modern == "", "", paste0("<div class=\"obj-sub\">", modern, "</div>")),
+    "<table>", row("Тип", d$type), row("Дворів на карті", d$houses),
+    status_row, row("Впевненість", conf), "</table>",
+    ifelse(is.na(d$note), "", paste0("<p class=\"obj-note\">", esc(d$note), "</p>")),
+    "<div class=\"obj-links\">", detail, post, "</div></div>"
+  )
 }
 
-# Назви груп, які створює add_markers(), для addLayersControl().
 marker_groups <- function(d) {
   d <- d |> filter(!is.na(lat), !is.na(lon))
   if (nrow(d) == 0) return(character(0))
@@ -25,28 +47,26 @@ marker_groups <- function(d) {
   c("Підписи", paste0("Написи: ", status_label(present)))
 }
 
-# Кружечки: колір за статусом, розмір за кількістю дворів, окремий шар
-# на кожен статус, підписи назв з'являються з певного зуму.
-add_markers <- function(map, d, label_zoom = 13:18) {
+# Кружечки: колір за статусом, розмір за дворами, шар на кожен статус,
+# підписи з певного зуму. fit = TRUE підганяє початковий вигляд під усі мітки.
+add_markers <- function(map, d, label_zoom = 13:18, fit = TRUE) {
   d <- d |> filter(!is.na(lat), !is.na(lon))
   if (nrow(d) == 0) return(map)
-
-  d$r_px  <- ifelse(is.na(d$houses), 5, pmin(18, 5 + 0.9 * sqrt(d$houses)))
-  d$fill  <- status_color(d$status)
-  d$pop   <- popup_html(d)
+  d$r_px <- ifelse(is.na(d$houses), 5, pmin(18, 5 + 0.9 * sqrt(d$houses)))
+  d$fill <- status_color(d$status)
+  d$pop  <- popup_html(d)
 
   for (s in STATUS$status) {
     part <- d[!is.na(d$status) & as.character(d$status) == s, ]
     if (nrow(part) == 0) next
     map <- addCircleMarkers(
-      map, data = part, lng = ~lon, lat = ~lat, radius = ~r_px,
+      map, data = part, lng = ~lon, lat = ~lat, radius = ~r_px, layerId = ~id,
       weight = 2, color = "#ffffff", fillColor = ~fill, fillOpacity = 0.9,
-      popup = ~pop, popupOptions = popupOptions(maxWidth = 280),
+      popup = ~pop, popupOptions = popupOptions(maxWidth = 300, minWidth = 220),
       label = ~name_hist, group = paste0("Написи: ", status_label(s))
     )
   }
-
-  map |>
+  map <- map |>
     addLabelOnlyMarkers(
       data = d, lng = ~lon, lat = ~lat, label = ~name_hist, group = "Підписи",
       labelOptions = labelOptions(noHide = TRUE, direction = "right",
@@ -56,6 +76,30 @@ add_markers <- function(map, d, label_zoom = 13:18) {
     groupOptions("Підписи", zoomLevels = label_zoom) |>
     addLegend(position = "bottomleft", colors = STATUS$color,
               labels = STATUS$label, title = "Статус", opacity = 0.9)
+  if (fit) {
+    map <- fitBounds(map, min(d$lon), min(d$lat), max(d$lon), max(d$lat),
+                     options = list(padding = c(40, 40), maxZoom = 15))
+  }
+  map
+}
+
+# karta.html#N-001 наближає до мітки й відкриває її картку.
+add_deep_link <- function(map) {
+  js <- "
+function(el, x) {
+  var map = this;
+  function go() {
+    var id = decodeURIComponent((window.location.hash || '').replace(/^#/, ''));
+    if (!id) { return; }
+    var layer = map.layerManager.getLayer('marker', id);
+    if (!layer || !layer.getLatLng) { return; }
+    map.setView(layer.getLatLng(), Math.max(map.getZoom(), 15));
+    layer.openPopup();
+  }
+  go();
+  window.addEventListener('hashchange', go);
+}"
+  htmlwidgets::onRender(map, js)
 }
 
 # Карта для шторки: лише сучасний знімок і стара карта поверх (непрозора).
