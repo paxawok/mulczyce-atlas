@@ -34,6 +34,8 @@ INS_COLS <- c("id", "name_hist", "type", "sheet", "houses", "name_modern",
 SET_COLS <- c("id", "inscription_id", "name_hist", "name_modern", "variants",
               "type", "houses", "first_mention", "status", "confidence",
               "lat", "lon", "obsidian_note", "source_ids", "note")
+TL_COLS <- c("id", "object_id", "date", "date_label", "category", "title",
+             "summary", "url", "post", "scope", "verified", "note")
 SRC_COLS <- c("id", "title", "period", "type", "url", "archive_ref", "notes",
               "obsidian_note")
 
@@ -85,6 +87,15 @@ dir.create("data", showWarnings = FALSE)
 write_csv(ins, "data/inscriptions.csv", na = "")
 write_csv(sett, "data/settlements.csv", na = "")
 write_csv(srcs, "data/sources.csv", na = "")
+
+# Вкладка «Хронологія» необов'язкова: якщо її немає, лишається поточний data/timeline.csv.
+tl <- tryCatch(read_tab("Хронологія", TL_COLS), error = function(e) NULL)
+if (!is.null(tl)) {
+  write_csv(tl, "data/timeline.csv", na = "")
+  message("data/timeline.csv (", nrow(tl), " рядків)")
+} else {
+  message("Вкладки «Хронологія» немає, data/timeline.csv не змінено.")
+}
 
 message("Збережено: data/inscriptions.csv (", nrow(ins), " рядків), ",
         "data/settlements.csv (", nrow(sett), " рядків).")
