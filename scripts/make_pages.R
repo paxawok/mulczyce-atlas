@@ -43,47 +43,81 @@ timeline_rows <- function(id) {
 timeline_html <- function(x) {
   e <- function(v) if (has(v)) htmlEscape(v) else ""
   cats <- unique(x$category[!is.na(x$category)])
-  chips <- paste0("<button type=\"button\" class=\"tl-chip active\" data-cat=\"all\">Усі</button>",
-    paste0("<button type=\"button\" class=\"tl-chip\" data-cat=\"", htmlEscape(cats, attribute = TRUE),
-           "\">", htmlEscape(cats), "</button>", collapse = ""))
-  out <- character(0); last_head <- ""
+  chips <- paste0('<button type="button" class="tl-chip active" data-cat="all">Усі</button>',
+    paste0('<button type="button" class="tl-chip" data-cat="', htmlEscape(cats, attribute = TRUE),
+           '">', htmlEscape(cats), '</button>', collapse = ""))
+  lanes <- c(50, 74, 50, 26)   # положення точок на лінії, % ширини
+  out <- character(0); k <- 0L; n50 <- 0L; und_started <- FALSE
   for (i in seq_len(nrow(x))) {
     r <- x[i, ]
-    yr <- suppressWarnings(as.integer(substr(r$date, 1, 4)))
-    head <- if (is.na(yr)) "Без точної дати" else paste0(as.character(utils::as.roman((yr - 1) %/% 100 + 1)), " століття")
-    if (head != last_head) { out <- c(out, paste0("<li class=\"tl-century\">", head, "</li>")); last_head <- head }
-    cls <- unname(CAT_CLASS[r$category]); if (is.na(cls)) cls <- "other"
-    badges <- paste0(
-      if (has(r$scope)) paste0("<span class=\"tl-badge\">", e(r$scope), "</span>") else "",
-      if (!identical(tolower(trimws(r$verified)), "так")) "<span class=\"tl-badge tl-unv\">не перевірено</span>" else "")
+    und <- !has(r$date)
+    if (und && !und_started) {
+      und_started <- TRUE; k <- 0L
+      out <- c(out, '<li class="tl2-sep">Без точної дати</li>')
+    }
+    lane <- lanes[(k %% length(lanes)) + 1]; k <- k + 1L
+    side <- if (lane > 50) "l" else if (lane < 50) "r" else if (n50 %% 2 == 0) "r" else "l"
+    if (lane == 50) n50 <- n50 + 1L
+
+    meta <- c(if (has(r$category)) toupper(r$category), if (has(r$scope)) r$scope,
+              if (!identical(tolower(trimws(r$verified)), "так")) "не перевірено")
     links <- character(0)
     if (has(r$url) && grepl("^https?://", r$url))
-      links <- c(links, paste0("<a href=\"", htmlEscape(r$url, attribute = TRUE), "\" target=\"_blank\" rel=\"noopener\">Джерело</a>"))
+      links <- c(links, paste0('<a href="', htmlEscape(r$url, attribute = TRUE),
+                               '" target="_blank" rel="noopener">джерело</a>'))
     posts <- if (has(r$post)) trimws(strsplit(r$post, ";")[[1]]) else character(0)
     posts <- posts[grepl("^[0-9]+$", posts)]
     for (pn in posts)
-      links <- c(links, paste0("<a href=\"", CHANNEL, pn, "\" target=\"_blank\" rel=\"noopener\">",
-                               if (length(posts) == 1) "Пост у каналі" else paste0("Пост ", pn), "</a>"))
+      links <- c(links, paste0('<a href="', CHANNEL, pn, '" target="_blank" rel="noopener">',
+                               if (length(posts) == 1) "пост у каналі" else paste0("пост ", pn), '</a>'))
+
     out <- c(out, paste0(
-      "<li class=\"tl-item tl-", cls, "\" data-cat=\"", htmlEscape(ifelse(is.na(r$category), "", r$category), attribute = TRUE), "\">",
-      "<span class=\"tl-dot\"></span><div class=\"tl-card\">",
-      "<div class=\"tl-date\">", e(ifelse(has(r$date_label), r$date_label, r$date)), "</div>",
-      "<div class=\"tl-meta\"><span class=\"tl-cat\">", e(r$category), "</span>", badges, "</div>",
-      "<div class=\"tl-title\">", e(r$title), "</div>",
-      if (has(r$summary)) paste0("<p class=\"tl-sum\">", e(r$summary), "</p>") else "",
-      if (has(r$note)) paste0("<p class=\"tl-note\">", e(r$note), "</p>") else "",
-      if (length(links)) paste0("<div class=\"tl-links\">", paste(links, collapse = ""), "</div>") else "",
-      "</div></li>"))
+      '<li class="tl2-item" data-cat="', htmlEscape(ifelse(has(r$category), r$category, ""), attribute = TRUE), '"',
+      if (und) ' data-und="1"' else "", ' style="--x:', lane, '%">',
+      '<span class="tl2-dot"></span><div class="tl2-text tl2-', side, '">',
+      '<div class="tl2-year">', e(ifelse(has(r$date_label), r$date_label, r$date)), '</div>',
+      '<div class="tl2-meta">', htmlEscape(paste(meta, collapse = " · ")), '</div>',
+      '<div class="tl2-title">', e(r$title), '</div>',
+      if (has(r$summary)) paste0('<p>', e(r$summary), '</p>') else "",
+      if (has(r$note)) paste0('<p class="tl2-note">', e(r$note), '</p>') else "",
+      if (length(links)) paste0('<div class="tl2-links">', paste(links, collapse = " "), '</div>') else "",
+      '</div></li>'))
   }
-  js <- paste0("<script>(function(){var w=document.currentScript.parentNode;",
-    "var b=w.querySelectorAll('.tl-chip'),it=w.querySelectorAll('.tl-item');",
-    "b.forEach(function(c){c.addEventListener('click',function(){",
-    "b.forEach(function(o){o.classList.remove('active')});c.classList.add('active');",
-    "var k=c.getAttribute('data-cat');",
-    "it.forEach(function(i){i.style.display=(k==='all'||i.getAttribute('data-cat')===k)?'':'none'});",
-    "});});})();</script>")
-  c("```{=html}", paste0("<div class=\"tl-wrap\"><div class=\"tl-filters\">", chips, "</div>",
-      "<ol class=\"tl\">", paste(out, collapse = ""), "</ol>", js, "</div>"), "```")
+
+  js <- paste0("<script>(function(){",
+"var w=document.currentScript.parentNode,box=w.querySelector('.tl2'),svg=box.querySelector('svg.tl2-path');",
+"var NS='http://www.w3.org/2000/svg';",
+"function draw(){",
+" while(svg.firstChild){svg.removeChild(svg.firstChild);}",
+" svg.setAttribute('width',box.offsetWidth);svg.setAttribute('height',box.offsetHeight);",
+" var br=box.getBoundingClientRect(),P=[];",
+" box.querySelectorAll('.tl2-item').forEach(function(it){",
+"  if(it.style.display==='none'){return;}",
+"  var d=it.querySelector('.tl2-dot').getBoundingClientRect(),t=it.getBoundingClientRect();",
+"  P.push({x:d.left+d.width/2-br.left,y:d.top+d.height/2-br.top,b:t.bottom-br.top,u:it.hasAttribute('data-und')});});",
+" for(var i=1;i<P.length;i++){",
+"  var a=P[i-1],b=P[i],dx=b.x-a.x,r=Math.min(18,Math.abs(dx)/2),s=dx>0?1:-1,dd;",
+"  if(Math.abs(dx)<1){dd='M'+a.x+' '+a.y+' V'+b.y;}else{",
+"   var lo=a.y+r,hi=b.y-r,m=Math.max(a.b+14,lo);if(m>hi){m=(a.y+b.y)/2;}",
+"   dd='M'+a.x+' '+a.y+' V'+(m-r)+' Q'+a.x+' '+m+' '+(a.x+s*r)+' '+m+' H'+(b.x-s*r)+' Q'+b.x+' '+m+' '+b.x+' '+(m+r)+' V'+b.y;}",
+"  var p=document.createElementNS(NS,'path');p.setAttribute('d',dd);p.setAttribute('class',b.u?'tl2-dash':'tl2-solid');svg.appendChild(p);}}",
+"var b=w.querySelectorAll('.tl-chip'),it=w.querySelectorAll('.tl2-item');",
+"b.forEach(function(c){c.addEventListener('click',function(){",
+" b.forEach(function(o){o.classList.remove('active');});c.classList.add('active');",
+" var k=c.getAttribute('data-cat');",
+" it.forEach(function(i){i.style.display=(k==='all'||i.getAttribute('data-cat')===k)?'':'none';});",
+" w.querySelectorAll('.tl2-sep').forEach(function(s){s.style.display=(k==='all')?'':'none';});",
+" draw();});});",
+"window.addEventListener('load',draw);window.addEventListener('resize',draw);",
+"if(document.fonts&&document.fonts.ready){document.fonts.ready.then(draw);}",
+"if(window.ResizeObserver){new ResizeObserver(draw).observe(box);}",
+"draw();})();</script>")
+
+  c("```{=html}",
+    paste0('<div class="tl-wrap"><div class="tl-filters">', chips, '</div>',
+           '<div class="tl2"><svg class="tl2-path" aria-hidden="true"></svg><ol class="tl2-list">',
+           paste(out, collapse = ""), '</ol></div>', js, '</div>'),
+    "```")
 }
 
 dir.create("objects", showWarnings = FALSE)
