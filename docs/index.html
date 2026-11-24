@@ -68,12 +68,34 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+
+<script src="site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
+
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -131,12 +153,12 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -145,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -157,19 +179,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Сховище краєзнавчих даних про Мульчиці та навколишні території Вараської громади (Рівненщина, історична Волинь і Полісся). Основа проєкту: порівняння аркушів міжвоєнної польської карти WIG (1:100 000, 1930-ті) із сучасними знімками.</p>
-<p>Канал у Telegram: <a href="https://t.me/mulczyce_oo">t.me/mulczyce_oo</a>.</p>
+<div class="home-hero">
+<p>Сховище краєзнавчих даних про населені пункти Вараської громади та їхні найближчі околиці: карти різних років, документи, преса, публікації й спогади.</p>
+</div>
+<div class="home-stats"><div class="home-stat"><b>16</b><span>населених пунктів</span></div><div class="home-stat"><b>1</b><span>пункт із хронологією</span></div><div class="home-stat"><b>39</b><span>записів у хронології</span></div><div class="home-stat"><b>5</b><span>джерел у каталозі</span></div></div>
+<section id="карта-околиць" class="level2">
+<h2 class="anchored" data-anchor-id="карта-околиць">Карта околиць</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-9e023db33880f8afcdca" style="width:100%;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9e023db33880f8afcdca">{"x":{"options":{"minZoom":8,"maxZoom":18,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Сучасний знімок",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"OpenStreetMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addTiles","args":["tiles/wig1931/{z}/{x}/{y}.webp","wig","Карта 1930-х",{"minZoom":10,"maxZoom":18,"maxNativeZoom":15,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":true,"zoomOffset":0,"zoomReverse":false,"opacity":0.65,"zIndex":1,"detectRetina":false,"attribution":"Карта WIG, 1930-ті"}]},{"method":"hideGroup","args":["Карта 1930-х"]},{"method":"addCircleMarkers","args":[[51.548828,51.5238,51.579769,51.55142,51.528578,51.534248,51.552554,51.528335,51.550043,51.544211,51.551784,51.542267,51.545223],[25.89455,25.868712,25.81339,25.852998,25.887584,25.847733,25.82554,25.809421,25.869279,25.869117,25.893254,25.85721,25.900503],[10.23320209770334,10.07921561087423,8.65329983228432,7.959591794226542,7.788854381999831,7.6,7.385640646055101,7.385640646055101,7.385640646055101,6,6,6,6],["N-002","N-004","N-026","N-007","N-011","N-010","N-015","N-014","N-006","N-009","N-005","N-008","N-013"],"Дані збираються",{"interactive":true,"className":"","stroke":true,"color":"#1F3864","weight":2.5,"opacity":0.5,"fill":true,"fillColor":"#ffffff","fillOpacity":0.9},null,null,["<div class=\"obj-card\"><div class=\"obj-title\">Звіринець<\/div><div class=\"obj-sub\">на карті 1930-х: Zwerynec<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#EF6C00\"><\/span>Змінилося<\/td><\/tr><tr><th>Дворів<\/th><td>28<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-002.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Траугутівка<\/div><div class=\"obj-sub\">на карті 1930-х: Trauguttówka<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#C62828\"><\/span>Зникло<\/td><\/tr><tr><th>Дворів<\/th><td>26<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-004.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Тараж<\/div><div class=\"obj-sub\">на карті 1930-х: Taraz<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Дворів<\/th><td>11<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-026.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Вішала<\/div><div class=\"obj-sub\">на карті 1930-х: Wiszała<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Дворів<\/th><td>6<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-007.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Загора<\/div><div class=\"obj-sub\">на карті 1930-х: Zahora<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Дворів<\/th><td>5<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-011.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Журавлине<\/div><div class=\"obj-sub\">на карті 1930-х: Podżabie<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#EF6C00\"><\/span>Змінилося<\/td><\/tr><tr><th>Дворів<\/th><td>4<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-010.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Ямне<\/div><div class=\"obj-sub\">на карті 1930-х: Jamne<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Дворів<\/th><td>3<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-015.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Захоромці<\/div><div class=\"obj-sub\">на карті 1930-х: Zachoromcze<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Дворів<\/th><td>3<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-014.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Завир<\/div><div class=\"obj-sub\">на карті 1930-х: Zawyce<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Дворів<\/th><td>3<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-006.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Коник<\/div><div class=\"obj-sub\">на карті 1930-х: Konik<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-009.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Любичі<\/div><div class=\"obj-sub\">на карті 1930-х: Podlubycze<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-005.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Pojedynce<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#757575\"><\/span>Не встановлено<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-008.html\">Відкрити сторінку<\/a><\/div><\/div>","<div class=\"obj-card\"><div class=\"obj-title\">Сельце<\/div><div class=\"obj-sub\">на карті 1930-х: Selce<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Хронологія<\/th><td>дані збираються<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-013.html\">Відкрити сторінку<\/a><\/div><\/div>"],{"maxWidth":300,"minWidth":220,"autoPan":true,"keepInView":false,"closeButton":true,"className":""},["Звіринець","Траугутівка","Тараж","Вішала","Загора","Журавлине","Ямне","Захоромці","Завир","Коник","Любичі","Pojedynce","Сельце"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[51.539918,25.889407,16,"N-001","Є хронологія",{"interactive":true,"className":"","stroke":true,"color":"#ffffff","weight":2.5,"opacity":0.5,"fill":true,"fillColor":"#1F3864","fillOpacity":0.95},null,null,"<div class=\"obj-card\"><div class=\"obj-title\">Мульчиці<\/div><div class=\"obj-sub\">на карті 1930-х: Mulczyce<\/div><table><tr><th>Статус<\/th><td><span class=\"obj-dot\" style=\"background:#2E7D32\"><\/span>Збереглося<\/td><\/tr><tr><th>Дворів<\/th><td>337<\/td><\/tr><tr><th>Хронологія<\/th><td>38 записів<\/td><\/tr><\/table><div class=\"obj-links\"><a class=\"obj-btn\" href=\"objects/N-001.html\">Відкрити сторінку<\/a><\/div><\/div>",{"maxWidth":300,"minWidth":220,"autoPan":true,"keepInView":false,"closeButton":true,"className":""},"Мульчиці",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[51.539918,51.548828,51.5238,51.579769,51.55142,51.528578,51.534248,51.552554,51.528335,51.550043,51.544211,51.551784,51.542267,51.545223],[25.889407,25.89455,25.868712,25.81339,25.852998,25.887584,25.847733,25.82554,25.809421,25.869279,25.869117,25.893254,25.85721,25.900503],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=","index":0},"iconWidth":1,"iconHeight":1},null,"Підписи",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Мульчиці","Звіринець","Траугутівка","Тараж","Вішала","Загора","Журавлине","Ямне","Захоромці","Завир","Коник","Любичі","Pojedynce","Сельце"],{"interactive":false,"permanent":true,"direction":"right","opacity":1,"offset":[10,0],"textsize":"10px","textOnly":true,"className":"mulczyce-label","sticky":true},null]},{"method":"setGroupOptions","args":["Підписи",{"zoomLevels":[12,13,14,15,16,17,18]}]},{"method":"addLayersControl","args":[["Сучасний знімок","OpenStreetMap"],["Карта 1930-х","Дані збираються","Є хронологія","Підписи"],{"collapsed":true,"autoZIndex":true,"position":"topright"}]}],"limits":{"lat":[51.5238,51.579769],"lng":[25.809421,25.900503]},"fitBounds":[51.5238,25.809421,51.579769,25.900503,{"padding":[30,30],"maxZoom":14}]},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="map-note"><span><i class="lg-dot on"></i>Є хронологія</span><span><i class="lg-dot off"></i>Дані збираються</span><span>Розмір кружечка залежить від кількості дворів на карті 1930-х.</span><span>Ще 2 пункти без координат у реєстрі, тому на карті їх немає.</span></div>
+</section>
+<section id="населені-пункти" class="level2">
+<h2 class="anchored" data-anchor-id="населені-пункти">Населені пункти</h2>
+<div id="places"><div class="pc-tools"><input type="search" class="pc-search" placeholder="Знайти населений пункт" aria-label="Знайти населений пункт"><button type="button" class="tl-chip active" data-mode="all">Усі 16</button><button type="button" class="tl-chip" data-mode="has">Є хронологія 1</button><button type="button" class="tl-chip" data-mode="none">Дані збираються 15</button></div><div class="pc-grid"><a class="pc has" href="objects/N-001.html" data-has="1" data-q="Mulczyce Мульчиці N-001"><div class="pc-title">Мульчиці</div><div class="pc-sub">на карті 1930-х: Mulczyce</div><div class="pc-line">337 дворів на карті 1930-х</div><div class="pc-cov">38 записів у хронології · 1552–2022</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-003.html" data-has="0" data-q="Byszlak Бишляк N-003"><div class="pc-title">Бишляк</div><div class="pc-sub">на карті 1930-х: Byszlak</div><div class="pc-line">82 двори на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-002.html" data-has="0" data-q="Zwerynec Звіринець N-002"><div class="pc-title">Звіринець</div><div class="pc-sub">на карті 1930-х: Zwerynec</div><div class="pc-line">28 дворів на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#EF6C00"></i>Змінилося</span></div></a><a class="pc none" href="objects/N-004.html" data-has="0" data-q="Trauguttówka Траугутівка N-004"><div class="pc-title">Траугутівка</div><div class="pc-sub">на карті 1930-х: Trauguttówka</div><div class="pc-line">26 дворів на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#C62828"></i>Зникло</span></div></a><a class="pc none" href="objects/N-026.html" data-has="0" data-q="Taraz Тараж N-026"><div class="pc-title">Тараж</div><div class="pc-sub">на карті 1930-х: Taraz</div><div class="pc-line">11 дворів на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-007.html" data-has="0" data-q="Wiszała Вішала N-007"><div class="pc-title">Вішала</div><div class="pc-sub">на карті 1930-х: Wiszała</div><div class="pc-line">6 дворів на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-011.html" data-has="0" data-q="Zahora Загора N-011"><div class="pc-title">Загора</div><div class="pc-sub">на карті 1930-х: Zahora</div><div class="pc-line">5 дворів на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-010.html" data-has="0" data-q="Podżabie Журавлине N-010"><div class="pc-title">Журавлине</div><div class="pc-sub">на карті 1930-х: Podżabie</div><div class="pc-line">4 двори на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#EF6C00"></i>Змінилося</span></div></a><a class="pc none" href="objects/N-015.html" data-has="0" data-q="Jamne Ямне N-015"><div class="pc-title">Ямне</div><div class="pc-sub">на карті 1930-х: Jamne</div><div class="pc-line">3 двори на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-014.html" data-has="0" data-q="Zachoromcze Захоромці N-014"><div class="pc-title">Захоромці</div><div class="pc-sub">на карті 1930-х: Zachoromcze</div><div class="pc-line">3 двори на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-006.html" data-has="0" data-q="Zawyce Завир N-006"><div class="pc-title">Завир</div><div class="pc-sub">на карті 1930-х: Zawyce</div><div class="pc-line">3 двори на карті 1930-х</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-009.html" data-has="0" data-q="Konik Коник N-009"><div class="pc-title">Коник</div><div class="pc-sub">на карті 1930-х: Konik</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-005.html" data-has="0" data-q="Podlubycze Любичі N-005"><div class="pc-title">Любичі</div><div class="pc-sub">на карті 1930-х: Podlubycze</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-008.html" data-has="0" data-q="Pojedynce  N-008"><div class="pc-title">Pojedynce</div><div class="pc-sub">сучасну назву ще не встановлено</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#757575"></i>Не встановлено</span></div></a><a class="pc none" href="objects/N-013.html" data-has="0" data-q="Selce Сельце N-013"><div class="pc-title">Сельце</div><div class="pc-sub">на карті 1930-х: Selce</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a><a class="pc none" href="objects/N-012.html" data-has="0" data-q="Ukowa Гукова N-012"><div class="pc-title">Гукова</div><div class="pc-sub">на карті 1930-х: Ukowa</div><div class="pc-cov pc-empty">Дані збираються</div><div class="pc-badges"><span class="pc-status"><i style="background:#2E7D32"></i>Збереглося</span></div></a></div><div class="pc-none-msg">Нічого не знайдено.</div><script>(function(){var root=document.getElementById('places');if(!root){return;}var input=root.querySelector('.pc-search'),chips=root.querySelectorAll('.tl-chip'),cards=root.querySelectorAll('.pc'),msg=root.querySelector('.pc-none-msg'),mode='all';function apply(){var q=input.value.trim().toLowerCase(),shown=0;cards.forEach(function(c){var ok=(mode==='all')||(mode==='has'&&c.getAttribute('data-has')==='1')||(mode==='none'&&c.getAttribute('data-has')==='0');if(ok&&q){ok=(c.getAttribute('data-q')||'').toLowerCase().indexOf(q)>-1;}c.style.display=ok?'':'none';if(ok){shown++;}});msg.style.display=shown?'none':'block';}input.addEventListener('input',apply);chips.forEach(function(b){b.addEventListener('click',function(){chips.forEach(function(o){o.classList.remove('active');});b.classList.add('active');mode=b.getAttribute('data-mode');apply();});});})();</script></div>
+</section>
 <section id="розділи" class="level2">
 <h2 class="anchored" data-anchor-id="розділи">Розділи</h2>
-<ul>
-<li><strong><a href="./karta.html">Карта</a></strong>: стара карта поверх сучасного знімка з повзунком прозорості, режимом «шторка» та мітками написів.</li>
-<li><strong><a href="./toponimy.html">Реєстр</a></strong>: усі написи з карти й населені пункти, з пошуком і фільтрами.</li>
-<li><strong><a href="./metodyka.html">Методика</a></strong>: джерела, геоприв’язка, коди статусів, обмеження.</li>
-</ul>
+<div class="home-sections">
+<div class="hs">
+<p><strong><a href="./karta.html">Карта</a></strong></p>
+<p>Карта WIG 1930-х поверх сучасного знімка, повзунок прозорості, мітки написів.</p>
+</div>
+<div class="hs">
+<p><strong><a href="./shtorka.html">Шторка</a></strong></p>
+<p>Порівняння старої карти й сучасного знімка рухомою лінією.</p>
+</div>
+<div class="hs">
+<p><strong><a href="./objects/index.html">Об’єкти</a></strong></p>
+<p>Сторінки пунктів і написів із хронологією згадок.</p>
+</div>
+<div class="hs">
+<p><strong><a href="./toponimy.html">Реєстр</a></strong></p>
+<p>Усі написи з карти з пошуком і фільтрами.</p>
+</div>
+<div class="hs">
+<p><strong><a href="./metodyka.html">Методика</a></strong></p>
+<p>Джерела, геоприв’язка, коди статусів, обмеження.</p>
+</div>
+</div>
+<h2 class="anchored">Що ще треба з'ясувати</h2><p class="home-sub">Знаєте відповідь або маєте документ? Напишіть у <a href="https://t.me/mulczyce_oo" target="_blank" rel="noopener">каналі</a>.</p><ul class="oq"><li><div class="oq-meta">Мульчиці · 1552–1555</div><div class="oq-title">Люстрація Пінського і Клецького князівств</div><div class="oq-note">Переклад зроблено інструментом, звірити з оригіналом.</div><div class="oq-links"><a href="https://t.me/mulczyce_oo/176" target="_blank" rel="noopener">Обговорити в каналі</a> <a href="objects/N-001.html">Сторінка об'єкта</a></div></li><li><div class="oq-meta">Мульчиці · 1853</div><div class="oq-title">Карта 1853 року</div><div class="oq-note">Уточнити, що саме це за карта.</div><div class="oq-links"><a href="https://t.me/mulczyce_oo/47" target="_blank" rel="noopener">Обговорити в каналі</a> <a href="objects/N-001.html">Сторінка об'єкта</a></div></li><li><div class="oq-meta">Мульчиці · з 1880</div><div class="oq-title">Słownik geograficzny Królestwa Polskiego</div><div class="oq-note">Уточнити том і чи гасло саме про це село.</div><div class="oq-links"><a href="https://t.me/mulczyce_oo/17" target="_blank" rel="noopener">Обговорити в каналі</a> <a href="objects/N-001.html">Сторінка об'єкта</a></div></li><li><div class="oq-meta">Мульчиці · 1918–1920</div><div class="oq-title">Окупація 1918–1920 років</div><div class="oq-note">Уточнити формулювання в джерелі.</div><div class="oq-links"><a href="https://t.me/mulczyce_oo/146" target="_blank" rel="noopener">Обговорити в каналі</a> <a href="objects/N-001.html">Сторінка об'єкта</a></div></li></ul>
 </section>
-<section id="стан-даних" class="level2">
-<h2 class="anchored" data-anchor-id="стан-даних">Стан даних</h2>
-<p>У реєстрі 26 написів. Для 21 з них уже встановлено статус щодо сучасності, координати є в 19.</p>
+<section id="про-проєкт" class="level2">
+<h2 class="anchored" data-anchor-id="про-проєкт">Про проєкт</h2>
+<p>Тут в одному місці збираються дані про села й урочища Вараської громади та їхні околиці: карти різних років, документи, преса, спогади й публікації. Основа проєкту: порівняння аркушів польської карти WIG (1:100 000, 1930-ті) із сучасними знімками.</p><p>Записи хронології зібрано з архівних документів, преси, карт і постів каналу. Позначка «не перевірено» означає, що запис ще не звірено з першоджерелом.</p><p>Докладно описано: <b>Мульчиці</b>. Решта пунктів з'являться в міру збору даних.</p><p><a href="metodyka.html">Методика й обмеження</a> · <a href="https://t.me/mulczyce_oo" target="_blank" rel="noopener">Канал у Telegram</a></p>
 
 
 </section>
